@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "version": "1.1.0",
+  "description": "",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "sharing",
+    "outdoors",
+    "web-scraping"
+  ],
+  "author": "deemichael",
+  "license": "MIT",
+  "bugs": {},
+  "dependencies": {
+    "mongoose": "^4.4.12"
+  }
+}
