@@ -46,7 +46,7 @@ dbSave()
 
 function dbSave(){
   if (users.length>0) {
-    var currentUser = user.pop(),
+    var currentUser = users.pop(),
             newUser = new User({
               username  : currentUser.username,
               password  : currentUser.password,
@@ -94,14 +94,15 @@ function dbSave(){
     // db connection - closes on final iteration of dbSave
     // *************************************************************************
     mongoose.connection.close()
-    console.log("-- ", successCounter, " gear items added to db successfully." )
+    console.log("-- ", successCounter, " user items added to db successfully." )
     if(errCounter>0) console.log("!-- ", errCounter, " users failed being added to the db - db error.")
     if(dupCounter>0){
       console.log("!-- ", dupCounter, " users were prevented from saving - duplicate.")
       dupBox.forEach(function(user){
-        console.log(user.firstname, " ", user.lastname)
+        console.log(user)
       })
     }
+    return
   }
 }
 
